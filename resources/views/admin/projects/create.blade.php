@@ -30,6 +30,15 @@
                 @endforeach
             </select><br>
 
+            <div class="d-flex mb-4">
+                @foreach ($technologies as $i => $technology)
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="{{ $technology->id }}" name="technology[]" id="technology{{$i}}">
+                        <label class="form-check-label me-4" for="technology{{$i}}">{{ $technology->name }}</label>       
+                    </div>
+                @endforeach
+            </div>
+
             <label for="content">Contenuto</label>
             <textarea name="content" id="content" cols="30" rows="10" class="form-control mb-4">{{ old("content") }}</textarea>
 
