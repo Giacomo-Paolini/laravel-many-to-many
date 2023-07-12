@@ -9,6 +9,7 @@
         <p>{{ $project->content }}</p>
         <img src="{{ $project->image }}" alt="{{ $project->title }}" />
     </div>
+    <a href="{{ route("admin.projects.edit", $project) }}" class="btn btn-primary">Edit Project</a>
 </div>
 
 @endsection
