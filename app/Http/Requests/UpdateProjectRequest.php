@@ -27,7 +27,8 @@ class UpdateProjectRequest extends FormRequest
             "title" => "required|min:4|max:160",
             "content" => "max:65535",
             "image" => "nullable|max:255",
-            "type_id" => "exists:types,id"
+            "type_id" => "exists:types,id",
+            "technology_id" => "exists:technologies,id"
         ];
     }
 

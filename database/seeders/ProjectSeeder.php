@@ -25,8 +25,5 @@ class ProjectSeeder extends Seeder
 
             $project->save();
         }
-
-
-
     }
 }

@@ -50,6 +50,8 @@ class ProjectController extends Controller
         $newProject->fill($data);
         $newProject->save();
 
+        $newProject->technologies()->attach($data['technology']);
+
         return to_route("admin.projects.show", $newProject);
     }
 
