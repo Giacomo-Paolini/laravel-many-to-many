@@ -15,16 +15,16 @@ class TypesTableSeeder extends Seeder
      */
     public function run()
     {
-        Type::create([
-            "name" => "Web Development"
-        ]);
 
-        Type::create([
-            "name" => "UI/UX Design"
-        ]);
-
-        Type::create([
-            "name" => "Mobile Development"
-        ]);
+        $types = [
+            "Web Development",
+            "UI/UX Design",
+            "Mobile Development"
+        ];
+        foreach ($types as $type) {
+            $newType = new Type();
+            $newType->name = $type;
+            $newType->save();
+        }
     }
 }

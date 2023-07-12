@@ -16,7 +16,11 @@ class Project extends Model
         "type_id"
     ];
 
-    public function category() {
-        return $this->belongsTo(Category::class);
+    public function types() {
+        return $this->belongsTo(Type::class);
+    }
+
+    public function technologies() {
+        return $this->belongsToMany(Technology::class);
     }
 }
